@@ -16,6 +16,7 @@ function App(props: any) {
 
     return (
         <div className="App">
+            <div>Hello</div>
             <AppTitle title={'This is component.'}/>
             <h2>Article 1</h2>
             <Rating value={ratingValue} onClick={setRatingValue}/>
