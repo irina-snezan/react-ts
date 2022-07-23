@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {AppTitle} from './components/AppTitle/AppTitle';
+import {Rating, RatingValueType} from './components/Rating/Rating';
+import {Accordion} from './components/Accordion/Accordion';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
+    let [collapsed, setCollapsed] = useState<boolean>(true)
+    return (
+        <div className="App">
+            <AppTitle title={'This is component.'}/>
+            <h2>Article 1</h2>
+            <Rating value={ratingValue} onClick={setRatingValue} />
+            <h2>Article 2</h2>
+            <Accordion titleValue={'Menu'} collapsed={collapsed} onChange={() =>{setCollapsed(!collapsed)}} />
+        </div>
+    );
 }
 
 export default App;
