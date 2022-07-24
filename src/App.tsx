@@ -4,9 +4,10 @@ import {AppTitle} from './components/AppTitle/AppTitle';
 import {Rating, RatingValueType} from './components/Rating/Rating';
 import {Accordion} from './components/Accordion/Accordion';
 import {UnControllerRating} from './components/UnControllerRating/UnControllerRating';
-import {SelfControlledAAccordion} from './components/SelfControlledAccordion/SelfControlledAccordion';
+
 import {UnControllerOnOff} from './components/UnControllerOnOff/UnControllerOnOff';
 import {OnOff} from './components/OnOff/OnOff';
+import {SelfControlledAccordion} from './components/SelfControlledAccordion/SelfControlledAccordion';
 
 
 function App(props: any) {
@@ -30,8 +31,7 @@ function App(props: any) {
                        collapsed={collapsed}
                        onChange={() => {setCollapsed(!collapsed)}}
             />
-            <SelfControlledAAccordion titleValue={'Menu'}/>
-            <SelfControlledAAccordion titleValue={'Contacts'}/>
+            <SelfControlledAccordion titleValue={'Contacts'}/>
 
             <h2>Article 3</h2>
 

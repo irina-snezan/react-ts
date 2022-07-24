@@ -9,7 +9,12 @@ export default {
     component: Accordion
 } as ComponentMeta<typeof Accordion>;
 
-const callback = action('accordion mode change event fired')
-export const collapsedMode = () => <Accordion titleValue={'Menu'} collapsed={true} onChange={callback}/>;
-export const unCollapsedMode = () =><Accordion titleValue={'Menu'} collapsed={false} onChange={callback}/>;
+const callback = action('accordion mode change event fired');
 
+export const collapsedMode = () => <Accordion titleValue={'Menu'} collapsed={true} onChange={callback}/>;
+export const unCollapsedMode = () => <Accordion titleValue={'Menu'} collapsed={false} onChange={callback}/>;
+
+export const ModeChanding = () => {
+    const [value, setValue] = useState<boolean>(true);
+    return <Accordion titleValue={'Menu'} collapsed={value} onChange={() => setValue(!value)}/>
+}

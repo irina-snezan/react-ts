@@ -4,7 +4,7 @@ type SelfControlledAccordionPropsType = {
     titleValue: string
 }
 
-export function SelfControlledAAccordion(props: SelfControlledAccordionPropsType) {
+export function SelfControlledAccordion(props: SelfControlledAccordionPropsType) {
 
     let [collapsed, setCollapsed] = useState(true);
 
@@ -24,7 +24,6 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    //console.log('AccordionTitle render');
     return (
         <h3 onClick={() => {
             props.onClick()
@@ -35,7 +34,6 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 type AccordionBodyPropsType = {}
 
 function AccordionBody(props: AccordionBodyPropsType) {
-    //console.log('AccordionBody render');
     return (
         <div>
             <ul>
