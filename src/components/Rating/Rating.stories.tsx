@@ -4,8 +4,8 @@ import {Rating, RatingValueType} from './Rating';
 
 
 export default {
-    title: 'Rating stories',
-    component: Rating,
+    title: 'Rating',
+    component: Rating
 } as ComponentMeta<typeof Rating>;
 
 export const EmptyRating = () => <Rating value={0} onClick={x => x}/>;
