@@ -58,7 +58,7 @@ export const ControlledCheckbox = () => {
     }
     return <input type='checkbox' checked={parentValue} onChange={onChangeHandler}/>
 }
-export const ControlledCSelect = () => {
+export const ControlledSelect = () => {
     const [parentValue, setParentValue] = useState<string | undefined>(undefined)
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         setParentValue(e.currentTarget.value)
