@@ -1,6 +1,6 @@
-import React from 'react';
-import {ComponentMeta} from '@storybook/react';
-import {SelfControlledAccordion} from './SelfControlledAccordion';
+import React, {useState} from 'react';
+import {ComponentMeta, Story} from '@storybook/react';
+import {SelfControlledAccordion, SelfControlledAccordionPropsType} from './SelfControlledAccordion';
 
 
 export default {
@@ -8,6 +8,10 @@ export default {
     component: SelfControlledAccordion
 } as ComponentMeta<typeof SelfControlledAccordion>;
 
-export const ModeChanding = () => {
-    return <SelfControlledAccordion titleValue={'Contacts'} />
+export const ModeChanging: Story<SelfControlledAccordionPropsType> = (args) => {
+    return <SelfControlledAccordion {...args}/>
+};
+
+ModeChanging.args = {
+    titleValue: 'Contacts'
 }

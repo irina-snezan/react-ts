@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-type SelfControlledAccordionPropsType = {
+export type SelfControlledAccordionPropsType = {
     titleValue: string
 }
 

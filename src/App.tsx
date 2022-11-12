@@ -3,11 +3,12 @@ import './App.css';
 import {AppTitle} from './components/AppTitle/AppTitle';
 import {Rating, RatingValueType} from './components/Rating/Rating';
 import {Accordion} from './components/Accordion/Accordion';
-import {UnControllerRating} from './components/UnControllerRating/UnControllerRating';
-
-import {UnControllerOnOff} from './components/UnControllerOnOff/UnControllerOnOff';
+import {UnControlledRating} from './components/UnControlledRating/UnControlledRating';
 import {OnOff} from './components/OnOff/OnOff';
 import {SelfControlledAccordion} from './components/SelfControlledAccordion/SelfControlledAccordion';
+import {UnControlledOnOff} from './components/UnControlledOnOff/UnControllerOnOff';
+import {Select} from './components/Select/Select';
+
 
 
 function App(props: any) {
@@ -22,22 +23,32 @@ function App(props: any) {
             <h2>Article 1</h2>
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UnControllerRating value={props.value}/>
-            <UnControllerRating value={props.value}/>
+            {/*<Accordion titleValue={'Menu'}*/}
+            {/*           collapsed={collapsed}*/}
+            {/*           onChange={() => {setCollapsed(!collapsed)}}*/}
+            {/*           onClick={()=> {}}*/}
+            {/*           items={props.items}*/}
+
+            {/*/>*/}
+            <OnOff title1={'On'} title2={'Off'} on={switchOn} onChange={(on) => setSwitchOn(on)}/>
 
             <h2>Article 2</h2>
 
-            <Accordion titleValue={'Menu'}
-                       collapsed={collapsed}
-                       onChange={() => {setCollapsed(!collapsed)}}
-            />
             <SelfControlledAccordion titleValue={'Contacts'}/>
+            <OnOff title1={'On'} title2={'Off'} on={switchOn} onChange={(on) => setSwitchOn(on)}/>
+            <UnControlledOnOff onChange={(on) => {}}/>
+            <UnControlledRating
+                defaultValue={props.defaultValue}
+                onChange={()=> {}}
+                defaultOn={props.defaultOn}
+                defaultOff={props.defaultOff}
+                value={props.value}
+            />
 
-            <h2>Article 3</h2>
-
-            <OnOff title1={'On'} title2={'Off'}/>
-            <OnOff title1={'On'} title2={'Off'}/>
-            <UnControllerOnOff title1={'On'} title2={'Off'} on={switchOn} onChange={(on) => setSwitchOn(on)}/>
+            <h2>Select</h2>
+            <Select
+                onChange={() => {}} items={[]} value={props.value}
+            />
         </div>
     );
 }

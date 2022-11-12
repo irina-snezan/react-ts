@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import classes from './OnOff.module.css'
 
-type OnOffPropsType = {
+export type OnOffPropsType = {
     title1: string
     title2: string
-
+    on?: boolean
+    onChange: (on:boolean) => void
 }
 
-function OnOff(props: OnOffPropsType) {
+export function OnOff(props: OnOffPropsType) {
 
     let [on, setOn] = useState(false);
     const onStyle = {
@@ -24,7 +25,7 @@ function OnOff(props: OnOffPropsType) {
     }
 
     const buttonOffHandler = () => {
-        setOn(false) ;
+        setOn(false);
     }
 
     return (
@@ -35,5 +36,3 @@ function OnOff(props: OnOffPropsType) {
         </div>
     )
 }
-
-export default OnOff;

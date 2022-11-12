@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 import classes from './../OnOff/OnOff.module.css'
 
-type OnOffPropsType = {
-    title1: string
-    title2: string
-    on: boolean
+export type OnOffPropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
+    defaultOff?: boolean
 }
 
-function UnControllerOnOff(props: OnOffPropsType) {
- let[on, setOn] = useState(false)
+export function UnControlledOnOff(props: OnOffPropsType) {
 
+    let[on, setOn] = useState(props.defaultOn ? props.defaultOn : false);
 
     const onStyle = {
         background: on ? 'green' : 'white'
@@ -37,5 +36,3 @@ function UnControllerOnOff(props: OnOffPropsType) {
         </div>
     )
 }
-
-export default UnControllerOnOff;

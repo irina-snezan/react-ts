@@ -37,8 +37,7 @@ export const WithoutValue = () => {
 }
 
 
-// const callback = action('accordion mode change event fired');
-// const onClickCallback = action('some item was clicked');
+
 //export const Primary: ComponentStory<typeof Select> = () => <Select primary>Select</Select>;
 // export const Template: Story<SelectPropsType> = (args) => <Select {...args} />
 // const callbacksProps = {
