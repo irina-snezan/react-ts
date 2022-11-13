@@ -23,8 +23,6 @@ export const SimpleExample = () => {
         document.title=counter.toString();
     },[counter]);
 
-
-
     return <div>
         Hello, {counter} {fake}
         <button onClick={() => setFake(fake + 1)}>+</button>
