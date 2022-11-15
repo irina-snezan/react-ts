@@ -49,3 +49,20 @@ export const SetTimeoutExample = () => {
         <button onClick={() => setCounter(counter + 1)}>+</button>
     </div>
 }
+
+export const SetIntervalExample = () => {
+    console.log('SetIntervalExample')
+    const [counter, setCounter] = useState(1);
+
+    // useEffect(() => {
+    //     setInterval( () => {
+    //         console.log('tick: ' + counter);
+    //         setCounter((state) => state + 1)
+    //     }, 1000);
+    //
+    // },[]);
+
+    return <div>
+        Hello, counter: {counter}
+    </div>
+}
